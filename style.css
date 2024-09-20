@@ -25,9 +25,12 @@ header {
 }
 .container {
     display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
 .logo{
- margin-left: 160px;
+ margin-left: 20px;
 
 }
 .logo img {
@@ -36,25 +39,21 @@ header {
 
 .right-section {
  display: flex;
-  justify-content: space-between; 
   align-items: center;
-  max-width: 100%; 
-  padding: 0 20px;
+  
 
 }
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 40px;
 }
 .navbar ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 13px;
     font-weight: 600;
-    text-shadow: 2px 2px 5px black;
-    border-image: linear-gradient(rgb(1, 1, 25));
-    -webkit-text-stroke: 1px #f1f2f3;
+    text-shadow: 2px 4px 5px black;
     text-transform: uppercase;
     transition: all 0.3s ease;
 }
@@ -69,13 +68,14 @@ header {
 .contact-info {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 .contact-info img {
     width: 24px;
+
 }
 .contact-info span {
-    font-size: 1.rem;
+    font-size: 1rem;
 }
 .video-section {
     position: relative;
@@ -94,27 +94,29 @@ header {
 .text-content {
     position: absolute;
     top: 50%;
-    left: 150px; 
+    left: 80px; 
     transform: translateY(-50%);
     color: #fff;
     z-index: 1;
 }
 
 .text-content h1 {
-    font-size: 3rem;
+    font-size: 2.9rem;
     margin-bottom: 20px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     max-width: 90%;
+    
 }
 
 .text-content p {
     font-size: 1.2rem;
-    max-width: 500px; 
     line-height: 1.5;
     color: #ccc;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 8px;
+    padding: 10px;
+    max-width: 70%;
 }
   /* section 2 */
 
@@ -144,7 +146,7 @@ header {
     margin-bottom: 40px;
     max-width: 84%;
 }
-.read-more {
+.reading-more {
     font-size: 1rem;
     color: burlywood;
     text-decoration: none;
@@ -153,16 +155,16 @@ header {
     transition: color 0.3s ease;
 }
 
-.read-more span {
+.reading-more span {
     font-size: 1.5rem;
     margin-left: 8px; 
     transition: margin-left 0.3s ease;
 }
 
-.read-more:hover {
+.reading-more:hover {
     color: #0056b3;
 }
-.read-more:hover span {
+.reading-more:hover span {
     margin-left: 12px; 
 }
 .right-content iframe {
@@ -464,6 +466,7 @@ header {
     text-align: center;
     position: relative;
     overflow: hidden;
+    
 }
 
 
@@ -771,7 +774,7 @@ header {
   .card-wrapper {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 10;
     flex-wrap: wrap; 
   }
   
@@ -909,9 +912,26 @@ header {
 
 
 @media (max-width: 768px) {
-    header {
-        padding: 4px 4px;
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
     }
+    .navbar ul li a {
+        font-size: 10px;
+    }
+    .logo {
+        margin-left: 0;
+    }
+    .text-content {
+        text-align: center;
+        left: 60px;
+    }
+    .text-content h1 {
+        max-width: 76%;
+    }
+
+
     .section-two {
         flex-direction: column;
         text-align: center;
@@ -920,10 +940,21 @@ header {
     .left-content, .right-content {
         max-width: 100%;
     }
+    .left-content p {
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+    .reading-more {
+        margin-bottom: 80px;
+    }
     
     .right-content iframe {
         width: 100%;
         height: auto;
+        margin-bottom: 60px;
+    }
+    .projects-header .projects-title {
+        margin-bottom: 20px;
     }
 
     .inspection-section {
@@ -976,37 +1007,80 @@ header {
         margin-bottom: 40px;
     }
 }
+
 @media (max-width: 1024px) {
     .section-five-right {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media (max-width: 420px){
+@media (max-width: 475px){
     .logo img {
         width: 80px;
+    }
+    .logo {
+        background: black;
+        padding: 0.1% 42%;
     }
     .right-section {
         display: flex;
         gap: 8px; 
         align-items: center;
-        padding-bottom:10px ;
-        margin-left: 20px;
     }
     .navbar ul {
         gap: 8px;
     }
     .navbar ul li a{
-        font-weight: 200px;
-        font-size: 8px;
+        font-weight: 300px;
     }
     .text-content h1 {
         font-size: 1rem;
     }
+    .text-content {
+        left:0 ;
+       }
     .text-content p {
-        font-size: 1rem;
+        font-size: 0.99rem;
+        max-width: 100%;
+        color: rgb(250, 247, 247);
+        background: none;
+   }
+   .text-content h1 {
+    font-size: 2rem;
+    max-width: 100%;
    }
    .section-two {
-    padding: 80px 80px 20px 80px;
+    padding-left:0px;
+    padding-right: 0px;
+    flex-direction: column;
+   }
+   .star-style{
+    padding: 10px;
+   }
+   .star2 img {
+    width: 50px;
+   }
+   .left-content{
+     max-width: 100%;
+     order: 2;
+   }
+   .right-content{
+     order: 1;
+     width: 80%;
+   }
+   .left-content p{
+    text-align: left;
+    padding: 10px;
+   }
+   .left-content h2 {
+    font-size: 1.7rem;
+    text-align: left;
+    padding: 10px;
+   }
+   .reading-more{
+    margin-bottom: 30px;
+   }
+   .right-content iframe {
+    width: 100%;
    }
    .projects-section {
     padding-bottom: 60px;
@@ -1015,20 +1089,64 @@ header {
     font-size: 1rem;
    }
    .card {
-    max-width: 200px;
+    max-width: 250px;
+    
+   }
+   .card-description {
+    font-size: 0.9rem;
    }
    .section-five {
     padding-top: 100px;
     padding-bottom: 100px;
    }
    .section-five-right .project img {
-    height: 300px;
+    height: 400px;
    }
    .inspection-left h2 {
     font-size: 2rem;
    }
+   
    .get-started-section h2 {
     font-size: 2rem;
+   }
+   .testimonial-wrapper {
+    flex-direction: column;
+    gap: 100px;
+   }
+   .get-started-section h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+   }
+   .card-wrapper {
+    gap: 0;
+   }
+   .get-started-card {
+    margin: 0.2px;
+    border-radius: 0;
+    font-weight: lighter;
+    width: 100%;
+   }
+   .newspaper-logos {
+    gap: 20px;
+   }
+   .featured-on-section h2 {
+    font-size: 1.1rem;
+    font-weight: bolder;
+   }
+   .newspaper-logos img {
+    max-width: 150px;
+   }
+   .copyright {
+    margin-top: 60px;
+   }
+   .social-media {
+    margin-top: 60px;
+
+   }
+   .footer-content {
+    text-align: left;
+    padding-left: 60px;
+    padding-right: 30px;
    }
    body {
     margin: 0;
@@ -1038,14 +1156,3 @@ header {
 }
 
 
-@media (max-width:320px){
-        
-} 
- .left-content p {
-    margin-bottom: 20px;
-    max-width: 95%;
- }
- .right-section {
-    margin-left: 50px;
-    
- }
